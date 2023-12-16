@@ -1,0 +1,38 @@
+body{
+    background-color: white;
+    background-size: cover;
+}
+.grid-product-container{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 20px;
+}
+.grid-product-container .product-grid{
+    background-color: white;
+    height: 400px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0px 0px 4px rgb(10, 20, 5);
+}
+.grid-product-container .product-grid img{
+    height: 100px;
+    width: 100px;
+    margin-top: 5px;
+}
+.order-item-button{
+    border: solid 2px tomato;
+    background-color: rgba(0, 50, 0, 0.1);
+    border-radius: 20px;
+    margin: 35px;
+    margin-top: 140px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: inherit;
+}
+.order-item-button p:hover {
+    background-color: aqua;
+}
+

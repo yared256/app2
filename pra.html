@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login and Sign-Up Form</title>
+    <script>
+      // function to validate the login form
+      function validateLogin() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        if (username == "" || password == "") {
+          alert("Please enter both username and password.");
+          return false;
+        }
+        return true;
+      }
+
+      // function to validate the sign-up form
+      function validateSignup() {
+        var username = document.getElementById("signup-username").value;
+        var email = document.getElementById("signup-email").value;
+        var password = document.getElementById("signup-password").value;
+        var confirmPassword = document.getElementById(
+          "signup-confirm-password"
+        ).value;
+        if (
+          username == "" ||
+          email == "" ||
+          password == "" ||
+          confirmPassword == ""
+        ) {
+          alert("Please fill in all the fields.");
+          return false;
+        }
+        if (password != confirmPassword) {
+          alert("Passwords do not match.");
+          return false;
+        }
+        return true;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Login</h1>
+    <form onsubmit="return validateLogin()">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" /><br /><br />
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" /><br /><br />
+      <input type="submit" value="Login" />
+    </form>
+    <h1>Sign Up</h1>
+    <form onsubmit="return validateSignup()">
+      <label for="signup-username">Username:</label>
+      <input
+        type="text"
+        id="signup-username"
+        name="signup-username"
+      /><br /><br />
+      <label for="signup-email">Email:</label>
+      <input type="email" id="signup-email" name="signup-email" /><br /><br />
+      <label for="signup-password">Password:</label>
+      <input
+        type="password"
+        id="signup-password"
+        name="signup-password"
+      /><br /><br />
+      <label for="signup-confirm-password">Confirm Password:</label>
+      <input
+        type="password"
+        id="signup-confirm-password"
+        name="signup-confirm-password"
+      /><br /><br />
+      <input type="submit" value="Sign Up" />
+    </form>
+  </body>
+</html>
